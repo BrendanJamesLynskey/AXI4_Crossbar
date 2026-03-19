@@ -1,0 +1,427 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Mar 19 17:13:51 2026
+# Process ID         : 16287
+# Current directory  : /home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs
+# Command line       : vivado -mode batch -source synth_axi_xbar_top.tcl -log vivado_axi_xbar_top.log -journal vivado_axi_xbar_top.jou
+# Log file           : /home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/vivado_axi_xbar_top.log
+# Journal file       : /home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/vivado_axi_xbar_top.jou
+# Running On         : bren-ubuntu24-04
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+# CPU Frequency      : 2902.143 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16630 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20925 MB
+# Available Virtual  : 15115 MB
+#-----------------------------------------------------------
+source synth_axi_xbar_top.tcl
+# set_param general.maxThreads 4
+# create_project -in_memory -part xc7a35tcpg236-1
+# read_verilog -sv [list \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_addr_decoder.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_arbiter.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_err_slave.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_w_path.sv \
+#     /home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_top.sv \
+# ]
+# set xdc_file "/home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/clock.xdc"
+# set fp [open $xdc_file w]
+# puts $fp "create_clock -period 10.000 -name clk \[get_ports clk\]"
+# close $fp
+# read_xdc $xdc_file
+# synth_design -top axi_xbar_top -part xc7a35tcpg236-1
+Command: synth_design -top axi_xbar_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16314
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2216.684 ; gain = 483.188 ; free physical = 8179 ; free virtual = 13141
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11067] parameter 'N_MASTERS' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:5]
+WARNING: [Synth 8-11067] parameter 'N_SLAVES' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:6]
+WARNING: [Synth 8-11067] parameter 'ADDR_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:7]
+WARNING: [Synth 8-11067] parameter 'DATA_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:8]
+WARNING: [Synth 8-11067] parameter 'STRB_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:9]
+WARNING: [Synth 8-11067] parameter 'ID_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:10]
+WARNING: [Synth 8-11067] parameter 'SID_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:11]
+WARNING: [Synth 8-11067] parameter 'MSTR_IDX_W' declared inside package 'axi_xbar_pkg' shall be treated as localparam [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_pkg.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'axi_xbar_top' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_top.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_w_path' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_w_path.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_addr_decoder' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_addr_decoder.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'axi_addr_decoder' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_addr_decoder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_arbiter' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_arbiter.sv:2]
+	Parameter N_REQ bound to: 32'sb00000000000000000000000000000010 
+	Parameter MODE bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'axi_arbiter' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_arbiter.sv:2]
+INFO: [Synth 8-226] default block is never used [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_w_path.sv:220]
+INFO: [Synth 8-226] default block is never used [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_w_path.sv:220]
+INFO: [Synth 8-6155] done synthesizing module 'axi_w_path' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_w_path.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_r_path' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'axi_r_path' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_err_slave' [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_err_slave.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'axi_err_slave' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_err_slave.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'axi_xbar_top' (0#1) [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_xbar_top.sv:2]
+WARNING: [Synth 8-6014] Unused sequential element r_locked_reg was removed.  [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element r_locked_master_flat_reg was removed.  [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv:148]
+WARNING: [Synth 8-6014] Unused sequential element m_tgt_reg was removed.  [/home/brendan/synthesis_workspace/AXI4_Crossbar/rtl/axi_r_path.sv:153]
+WARNING: [Synth 8-7129] Port awaddr[31] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[30] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[29] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[28] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[27] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[26] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[25] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[24] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[23] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[22] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[21] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[20] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[19] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[18] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[17] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[16] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[15] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[14] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[13] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[12] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[11] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[10] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[9] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[8] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[7] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[6] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[5] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[4] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[3] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[2] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awaddr[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[7] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[6] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[5] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[4] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[3] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[2] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlen[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awsize[2] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awsize[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awsize[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awburst[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awburst[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[31] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[30] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[29] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[28] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[27] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[26] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[25] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[24] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[23] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[22] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[21] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[20] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[19] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[18] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[17] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[16] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[15] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[14] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[13] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[12] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[11] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[10] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[9] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[8] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[7] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[6] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[5] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[4] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[3] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[2] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wstrb[3] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wstrb[2] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wstrb[1] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wstrb[0] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[31] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[30] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[29] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[28] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[27] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[26] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[25] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[24] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[23] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[22] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[21] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[20] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[19] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[18] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[17] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[16] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[15] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[14] in module axi_err_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port araddr[13] in module axi_err_slave is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2346.668 ; gain = 613.172 ; free physical = 8020 ; free virtual = 12984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2349.637 ; gain = 616.141 ; free physical = 8020 ; free virtual = 12984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2349.637 ; gain = 616.141 ; free physical = 8020 ; free virtual = 12984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2349.637 ; gain = 0.000 ; free physical = 8024 ; free virtual = 12988
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/clock.xdc]
+Finished Parsing XDC File [/home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/clock.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2452.348 ; gain = 0.000 ; free physical = 8043 ; free virtual = 13006
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2452.383 ; gain = 0.000 ; free physical = 8042 ; free virtual = 13006
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2452.383 ; gain = 718.887 ; free physical = 8077 ; free virtual = 13040
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2464.559 ; gain = 731.062 ; free physical = 8077 ; free virtual = 13040
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2464.559 ; gain = 731.062 ; free physical = 8076 ; free virtual = 13040
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'axi_err_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'axi_err_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              ERR_W_IDLE |                              001 |                               00
+              ERR_W_DATA |                              010 |                               01
+              ERR_W_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'one-hot' in module 'axi_err_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              ERR_R_IDLE |                                0 |                               00
+              ERR_R_DATA |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'axi_err_slave'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2464.559 ; gain = 731.062 ; free physical = 8074 ; free virtual = 13041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 10    
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input  160 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 20    
+	   2 Input   20 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 21    
+	   2 Input    5 Bit        Muxes := 12    
+	   2 Input    4 Bit        Muxes := 10    
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 20    
+	   2 Input    2 Bit        Muxes := 40    
+	   4 Input    2 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 76    
+	   3 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2496.582 ; gain = 763.086 ; free physical = 8028 ; free virtual = 13002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+--------------------+---------------+----------------+
+|Module Name | RTL Object         | Depth x Width | Implemented As | 
++------------+--------------------+---------------+----------------+
+|axi_w_path  | w_state_next_flat1 | 1024x2        | LUT            | 
+|axi_r_path  | m_rvalid0          | 1024x2        | LUT            | 
+|axi_w_path  | w_state_next_flat1 | 1024x2        | LUT            | 
+|axi_r_path  | m_rvalid0          | 1024x2        | LUT            | 
++------------+--------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2551.582 ; gain = 818.086 ; free physical = 7990 ; free virtual = 12964
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 2594.629 ; gain = 861.133 ; free physical = 7941 ; free virtual = 12915
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 2594.629 ; gain = 861.133 ; free physical = 7941 ; free virtual = 12915
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7807 ; free virtual = 12781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     4|
+|3     |LUT2 |    25|
+|4     |LUT3 |    14|
+|5     |LUT4 |   576|
+|6     |LUT5 |    47|
+|7     |LUT6 |   272|
+|8     |FDRE |    41|
+|9     |FDSE |     1|
+|10    |IBUF |   490|
+|11    |OBUF |   668|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.441 ; gain = 1018.945 ; free physical = 7808 ; free virtual = 12781
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 2752.441 ; gain = 916.199 ; free physical = 7808 ; free virtual = 12782
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 2752.449 ; gain = 1018.945 ; free physical = 7808 ; free virtual = 12782
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2752.449 ; gain = 0.000 ; free physical = 7976 ; free virtual = 12950
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/clock.xdc]
+Finished Parsing XDC File [/home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/clock.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.074 ; gain = 0.000 ; free physical = 7982 ; free virtual = 12956
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ad8f0bb7
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:00:56 . Memory (MB): peak = 2789.109 ; gain = 1177.816 ; free physical = 7982 ; free virtual = 12956
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2115.790; main = 2115.790; forked = 345.644
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3524.602; main = 2789.078; forked = 1028.016
+# report_utilization -file /home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/utilization_axi_xbar_top.rpt
+# report_timing_summary -file /home/brendan/synthesis_workspace/AXI4_Crossbar/synthesis_logs/timing_axi_xbar_top.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_timing_summary: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2789.109 ; gain = 0.000 ; free physical = 7953 ; free virtual = 12927
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 17:15:00 2026...
