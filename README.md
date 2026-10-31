@@ -213,6 +213,13 @@ AXI4_Crossbar/
 - [Architecture Report](docs/axi_xbar_architecture.md) — block diagrams, microarchitecture details, and design rationale
 - [Waveform Notes](docs/waveform_notes.md) — key signals for debugging in GTKWave
 
+## How this was built
+
+This crossbar was written quickly with AI assistance (Claude Code) in March 2026, from a written specification, as one
+of a set of SoC components. Its testbenches pass as described above, but unlike the
+[5-stage core](https://github.com/BrendanJamesLynskey/RISCV_RV32IMC_5stage), which I have since reviewed line by line
+and re-verified, it has not had that review: treat it as a working sketch rather than verified IP.
+
 ## License
 
 MIT
